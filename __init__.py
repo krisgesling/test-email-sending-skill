@@ -7,6 +7,7 @@ class TestEmailSending(MycroftSkill):
 
     @intent_file_handler('sending.email.test.intent')
     def handle_sending_email_test(self, message):
+        self.send_email("Test email", "This is a test email from Mycroft")
         self.speak_dialog('sending.email.test')
 
 
